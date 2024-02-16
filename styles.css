@@ -153,6 +153,7 @@
         flex-direction: column;
         align-items: start;
         justify-content: center;
+        background-color: wheat;
     }
 
     #text {
