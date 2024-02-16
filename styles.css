@@ -5,9 +5,13 @@ header{
     height: 80px;
     background-color: rgb(255, 115, 0);
     position: absolute;
+    color: white; 
+    text-align: center;  
 }
 
 #logo{
+    position: absolute;
+    left: 10px;
     padding-top: 15px;
 }
 body{
@@ -131,7 +135,7 @@ footer{
     left: 30%;
 }
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 800px) {
     .logo {
         padding-top: 10px;
     }
