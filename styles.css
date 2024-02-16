@@ -130,3 +130,46 @@ footer{
     top: 85%;
     left: 30%;
 }
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        padding-top: 10px;
+    }
+
+    #text {
+        margin-top: 10px; 
+        height: 100px; 
+        font-size: 14px; 
+    }
+
+    .buttons {
+        margin-top: 10px; 
+    }
+
+    .rectangle {
+        margin-top: 10px;
+        padding: 10px; 
+    }
+
+    #traduccion {
+        font-size: 14px;
+        height: 100px; 
+    }
+    
+    .rrss{
+        display: flex;
+        scale: 5%;
+        width: 50px;
+        height: 10px;
+        gap: 50px;
+    }
+    
+    footer{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 75%;
+        left: 30%;
+    }
+    
+}
