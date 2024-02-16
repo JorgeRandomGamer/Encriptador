@@ -135,14 +135,18 @@
         width: 50px;
         height: 10px;
         gap: 100px;
+        margin-left: -60px;
     }
     
     footer{
         display: flex;
+        align-items: center;
         flex-direction: column;
         position: absolute;
         top: 85%;
-        left: 30%;
+        left: 25%;
+        font-family: "Fredoka", sans-serif;
+        font-size: 15px;
     }
 
 }
@@ -223,7 +227,7 @@
         flex-direction: column;
         position: absolute;
         top: 1650px;
-        left:300px;
+        left:250px;
         padding-bottom: 20px;
     }
     
