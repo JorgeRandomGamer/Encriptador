@@ -2,7 +2,7 @@ let firstTry = true;
 
 function encriptar(){
 
-    let textoAntiguo = document.getElementById('text').value;
+    let textoAntiguo = document.querySelector('.text').value;
     let textoNuevo = "";
 
     if(textoAntiguo.length > 0){
@@ -30,20 +30,20 @@ function encriptar(){
         }
 
         if(firstTry){
-            document.getElementById('mona').remove();
-            document.getElementById('warning').remove();
             firstTry = false;
+            document.getElementById('mona').remove();
             document.getElementById('copy').removeAttribute('hidden');
+            document.querySelector('.traduccion').removeAttribute('hidden');
         }
         
-        document.getElementById('traduccion').innerHTML = textoNuevo;
-        document.getElementById('text').value = '';
+        document.getElementById('warning').innerHTML='Su Mensaje Fue Encriptado Correctamente :D';
+        document.querySelector('.traduccion').innerHTML = textoNuevo;
     }
 }
 
 function desencriptar(){
 
-    let textoAntiguo = document.getElementById('text').value;
+    let textoAntiguo = document.querySelector('.text').value;
     let textoNuevo = "";
 
     if(textoAntiguo.length > 0){
@@ -106,13 +106,14 @@ function desencriptar(){
         }
 
         if(firstTry){
-            document.getElementById('mona').remove();
-            document.getElementById('warning').remove();
             firstTry = false;
+            document.getElementById('mona').remove();
             document.getElementById('copy').removeAttribute('hidden');
+            document.querySelector('.traduccion').removeAttribute('hidden');
         }
-        document.getElementById('traduccion').innerHTML = textoNuevo;
-        document.getElementById('text').value = '';
+        document.getElementById('warning').innerHTML='Su Mensaje Fue Desencriptado Correctamente :D';
+        document.querySelector('.traduccion').innerHTML = textoNuevo;
+        document.getElementById('.text').value = '';
     }
 }
 
@@ -127,6 +128,6 @@ function buscarPalabraEncriptada(palabraBuscada, aux, texto, posicion){
 }
 
 function copiar(){
-    document.getElementById('traduccion').select();
+    document.querySelector('.traduccion').select();
     document.execCommand('copy');
 }

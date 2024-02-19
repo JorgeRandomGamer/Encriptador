@@ -1,12 +1,12 @@
 @media screen {
 
     header{
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 80px;
-        background-color: rgb(255, 115, 0);
-        position: absolute;
+        background-color: red;
         color: white; 
         text-align: center;  
         font-size: 25px;
@@ -18,115 +18,122 @@
         left: 10px;
         padding-top: 15px;
     }
-    body{
-        background-color: rgb(164, 255, 226);
+
+    main {
+        margin-top: 80px;
         margin-left: 200px;
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 100vh;
-        gap: 100px;
+        justify-content: space-around;
     }
-    
+
     .textPlace{
-        display: flex;
-        flex-direction: column;
-        gap: 100px;
-        width: 500px;
-        align-items: center;
-    
+        display: grid;
+        justify-content: center;
+        width: 600px;
     }
     
-    #text{
-        display: block;
-        background: rgb(207, 255, 215);
+    .text{
+        background-color: rgba(234, 234, 234, 0.911);
         border-color: transparent;
         border-radius: 20px;
+        margin: 100px auto -200px auto;
         padding: 10px;
-        width: 90%;
-        min-width: 300px;
+        width: 80%;
         height: 300px;
         font-size: 20px;
         font-family: "Fredoka", sans-serif;
-        resize: vertical;
         box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3), -5px -5px 30px rgba(0, 0, 0, 0.3);
     }
     
+    .text:active {
+        transform: scale(1.01);
+    }
+
     #bottom{
-        background-color: rgb(255, 115, 0);
         width: 500px;
         border-radius: 25px;
         font-family: "Fredoka", sans-serif;
     }
     
     #ad{
-        margin-top: 20px;
-        margin-bottom: 10px;
-        color: rgb(2, 2, 92);
+        margin: 0 0 10px 100px;
+        color: red;
     }
     
     .buttons{
-        margin-top: 20px;
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
+        padding: 10px 40px;
+        display: inline;
+        width: 50%;
     }
     
     .in, .out{
-        width: 100%;
-        height: 60px;
+        margin: 0 auto;
+        height: 40px;
+        width: 40%;
         border-radius: 25px;
-        background-color: rgba(78, 220, 255, 0.832);
-        color: rgb(2, 2, 92);
-        border-color: rgb(2, 2, 92);
         font-family: "Fredoka", sans-serif;
     }
     
     .rectangle{
-        background-color: rgb(255, 98, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(234, 234, 234, 0.911);
         border-radius: 40px;
-        box-shadow: 5px 5px 30px #00000014, -5px -5px 30px #00000014;
-        width: 70%;
-        min-width: 300px;
-        max-width: 500px;
-        height: 80%;
-        margin-top: 50px;
+        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3), -5px -5px 30px rgba(0, 0, 0, 0.3);
+        width: 40%;
+        height: 800px;
+        margin: 20px auto;
         padding: 20px;
         font-family: "Fredoka", sans-serif;
     }
     
     #mona{
         margin-top: 80px;
-        margin-left: 80px;
     }
     
     #warning{
-        margin-top: 50px;
         text-align: center;
         font-size: 25px;
+        color: red;
+        box-sizing: border-box;
     }
     
-    #traduccion{
+    .traduccion{
+        color: rgb(255, 8, 0);
+        margin-top: 200px;
+        text-align: center;
         background-color: transparent;
         border-color: transparent;
         font-size: 20px;
-        width: 100%;
-        min-height: 20px;
-        max-height: 100%;
-        height: auto;
+        width: 80%;
+        height: 400px;
         font-family: "Fredoka", sans-serif;
     }
     
     #copy{
         border-radius: 25px;
-        width: 100%;
-        height: 40px;
-        margin-top: 90%;
-        background-color: rgba(78, 220, 255, 0.832);
-        color: rgb(2, 2, 92);
-        border-color: rgb(2, 2, 92);
+        width: 90%;
+        height: 80px;
+        margin-top: 50%;
         font-family: "Fredoka", sans-serif;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: red;
+        color: white;
+        border: none;
+    }
+
+    button:active {
+        transform: scale(1.02);
+    }
+
+    button:hover {
+        cursor: pointer;
+        color: red;
+        background-color: transparent;
     }
     
     .rrss{
@@ -139,11 +146,12 @@
     }
     
     footer{
+        color: black;
         display: flex;
         align-items: center;
         flex-direction: column;
         position: absolute;
-        top: 85%;
+        bottom: 20px;
         left: 25%;
         font-family: "Fredoka", sans-serif;
         font-size: 15px;
@@ -151,65 +159,65 @@
 
 }
 @media (max-width: 800px) {
-    .logo {
-        width: 30px;
-        height: 30px;
-    }
-
     header{
         width: 800px;
-        height: 80px;
+        height: 50px;
         text-align: center;
+        padding-top: 30px;
+        background-color: red;
+        color: white; 
         font-size: 25px;
+        font-family: "Fredoka", sans-serif;
     }
 
-    body{
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: center;
+    #logo {
+        position: absolute;
+        top: 0;
     }
 
-    #text {
-        background: rgb(207, 255, 215);
-        border-color: transparent;
-        border-radius: 20px;
-        margin-top: 1000px; 
+    main {
+        display: inline-block;
+    }
+
+    .textPlace{
+        display: inline-block;
+        margin: 10px auto;
+        width: 60%;
+    }
+
+    .text {
         font-size: 14px;
-        max-width: 300px;
-        width: 100vh;
+        width: 300px;
         height: 300px;
-        margin-right: 225px;
+        margin: 20px 0 20px -20px;
         box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3), -5px -5px 30px rgba(0, 0, 0, 0.3);
     }
-
+    
     #bottom{
-        display: flex;
-        flex-direction: column;
-        padding: 15px;
-        margin-right: 225px;
-        gap: 10px;
+        display: inline-block;
+        margin-left: -50px;
     }
-
-    .buttons {
-        margin-top: 10px; 
+    
+    #ad{
+        margin: 10px 20px;
+        transform: scale(0.7);
+        color: red;
+    }
+    
+    .buttons{
+        padding: 10px 0;
+        display: inline;
+        width: 40%;
     }
 
     .rectangle{
-        background-color: rgb(255, 98, 0);
-        width: 300px;
-        height: 700px;
-        padding: 20px;
-        border-radius: 40px;
-        transform: translate(-30px, -80px);
-        box-shadow: 5px 5px 30px #00000014, -5px -5px 30px #00000014;
+        width: 60%;
+        height: 500px;
+        margin-left: -20px;
     }
 
-    #mona{
-        transform: translate(-100px, 10px);
-    }
-
-    #traduccion {
+    .traduccion {
+        margin-top: 50px;
         font-size: 14px;
         height: 100px; 
     }
@@ -223,12 +231,10 @@
     }
     
     footer{
-        display: flex;
-        flex-direction: column;
         position: absolute;
-        top: 1650px;
+        top: 1100px;
         left:250px;
-        padding-bottom: 20px;
+        margin: 40px auto;
     }
     
 }
