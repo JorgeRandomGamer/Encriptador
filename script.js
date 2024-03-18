@@ -23,8 +23,17 @@ function encriptar(){
                 case "u":
                     textoNuevo += "ufat";
                     break;
+                case "c":
+                    textoNuevo += "colette";
+                    break;
+                case "r":
+                    textoNuevo += "roar";
+                    break;
+                case "s":
+                    textoNuevo += "suma";
+                    break;
                 default:
-                    textoNuevo += textoAntiguo[i];
+                    textoNuevo += textoAntiguo[i].toLowerCase();
                     break;
             }
         }
@@ -100,6 +109,33 @@ function desencriptar(){
                         textoNuevo += textoAntiguo[i];
                     }
                     break;
+                case "c":
+                        aux = buscarPalabraEncriptada("colette", aux, textoAntiguo, posicionAuxiliar);
+                        if(aux == "colette"){
+                            textoNuevo += "c";
+                            i += aux.length-1;
+                        }else{
+                            textoNuevo += textoAntiguo[i];
+                        }
+                        break;
+                case "r":
+                    aux = buscarPalabraEncriptada("roar", aux, textoAntiguo, posicionAuxiliar);
+                    if(aux == "roar"){
+                        textoNuevo += "r";
+                        i += aux.length-1;
+                    }else{
+                        textoNuevo += textoAntiguo[i];
+                    }
+                    break;
+                case "s":
+                    aux = buscarPalabraEncriptada("suma", aux, textoAntiguo, posicionAuxiliar);
+                    if(aux == "suma"){
+                        textoNuevo += "s";
+                        i += aux.length-1;
+                    }else{
+                        textoNuevo += textoAntiguo[i];
+                    }
+                    break;    
                 default:
                     textoNuevo += textoAntiguo[i];
             }
